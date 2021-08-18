@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Zener diode as voltage regulator</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/league.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+
+		<style>
+
+.container {
+	display: flex;
+}
+
+	.col {
+		flex: 1
+	}
+span.small {
+	font-size: smaller;
+}
+span.smal {
+	font-size: 29px;
+}
+.emp{
+	color:DodgerBlue;
+	/*	  
+		  font-size: 54px;
+		  font-weight: bold; 
+		  font-family: "Times New Roman", Times, serif;
+	 */
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- ================================ start the slides ======================== -->
+				<section>
+					<h1>Welcome to presentation</h1>
+				</section>
+
+				<section data-background-color="black"
+					 data-transition="convex" >
+
+					 <h2> Zener Diode as Voltage Regulator </h2>
+
+					<p><span class="small">Talha E Noor</span></p>
+					<p><span class="small">Roll : 1910051</span></p>
+				</section>
+				<section>
+					<h2>In this presentation -</h2>
+					We'll know
+					<ul>
+						<li>About zener diode</li>
+						<li>About voltage regulation</li>
+						<li>How can we use zener diode as a voltage regulator</li>
+					</ul>
+				</section>
+				<section data-transition="zoom">
+					<section>
+						<h3><span class="emp">Zener Diode</span></h3>
+						What is a "Zener Diode" ?
+						<ul>
+							<li class="fragment"> a special type of diode </li>
+							<span class="fragment fade-in">
+								<li> designed reliably <span class="emp">allow current to flow "backwards"</span>- </li>
+								<!-- When a certain set reverse voltage is reached.(known as zener voltage) -->
+								in a certain condition.
+							</span>
+						</ul>
+					</section>
+					<section>
+						Other properties of zener diode - 
+						<span class="small">
+							<ul>
+								<li>	Heavily doped </li>
+								<li>	High power dissipation capability </li>
+								<li>	Acts as a normal diode in the forward bias </li>
+								<li class="fragment fade-in">	Zener Breakdown Voltage is much lower than Avalanche Breakdown voltage </br> (Usually, $V_{Avalanche Breakdown} > 6$ , $V_{Zener Breakdown}<6$) </li>
+							</ul>
+
+						</span>
+					</section>
+
+					<section>
+						<p align="left"><span class="emp">Zener Voltage :</span>The voltage that is sufficient for the reverse breakdown condition thus allowing the diode to conduct in the reverse direction.</p>  
+						Zener voltage is given by the manufacturer. 
+						<span class="fragment fade-in">
+							<p align="left"> <span class="emp">On state :</span>
+							When the voltage accross the zener diode is equal to or greater than Zener voltage  
+							</p>
+							<p align="left">
+							<span class="emp">Off state :</span>
+							When the voltage accross the zener diode is less than Zener voltage
+							</p>
+						</span>
+
+					</section>
+
+					<section data-background-color="white"
+						 data-transition="convex"
+						 >
+						 I vs V graph - 
+						 <div class="container">
+						<div class="col">
+							<img src="./images/zvi.webp" alt=""> 
+							</br>
+							<span class="small">
+								voltage in reverse bias doesn't change once it reaches $V_{Zener}$
+							</span>
+						</div>
+						 </div>
+					</section>
+
+				</section>
+				<section data-transition="concave"> 
+					<section>
+						<h1>Voltage Regulation</h1>
+					</section>
+					<section>
+						<p align="left">
+						<span class="emp">A Voltage Regulator is</span> - </br>
+						A system designed to automatically maintain a constant voltage. </br>
+						</p>
+						<span class="small">
+							<p class="fragment">So, in order to work as a voltage regulator, the zener diode will also have to maintain a constant voltage accross a load. </p>
+						</span>
+					</section>
+					<section>
+						<p>
+						We learned - Once voltage accross the zener diode reaches "zener voltage", the voltage doesn't change.
+						</p>
+						<span class="fragment fade-down">
+							<div class="container">
+								<div class="col">
+									<span class="emp">
+										So, if we take a zener diode, and connect it with a voltage source - 
+									</span>
+								</div>
+								<div class="col">
+									<img src="./images/zv.svg" alt="">
+								</div>
+							</div>
+							<p>
+							<span class="small">
+								While ON state condition - it will maintain a constant voltage.
+							</span>
+							</p>
+						</span>
+					</section>
+					<section>
+						<h3>
+							<span class="">
+								Let's connect the previous circuit with a load
+							</span>
+						</h3>
+					</section>
+
+					<section data-background-color="lightRed"
+						 data-transition="zoom"
+						 >
+						 <img src="./images/zf.svg" alt="">
+						 </br>
+						<span class="smal">
+							<ul>
+								<li>We know, voltage accross parallel connected devices is the same,</li>
+								<li>So, voltage accross the diode and the load is the same.</li>
+								</br>
+								<li>On state condition : voltage accross zener diode = zener voltage </li>
+								<li>Finally we get, on state : Load voltage = zener voltage </li>
+							</ul>
+							</small>
+					</section>
+					<section data-background-color="black"
+						 data-transition="convex"
+						 >
+						 <div class="container">
+							 <div class="col">
+								 <span class="small">
+									 So, we can now take a <span class="emp">device</span> that <span class="emp">operates</span> in that <span class="emp">Zener voltage</span> ,
+									 and put it in parallel with the zener diode, and it will
+									 get stabilised voltage.
+
+								 </span>
+								 <h4><span style="color:lightGreen">This is how we can use a zener diode as a voltage regulator</span></h4>
+							 </div>
+
+							 <div class="col">
+								 <img src="./images/zf.svg" alt="">
+							 </div>
+						 </div>
+					</section>
+
+				</section>
+
+				<!-- <section> -->
+				<!-- <section> -->
+				<!-- 	There can be 4 types of situation- -->
+				<!-- 	<ol> -->
+				<!-- 		<li>$V_{Input}$ and $R_L$ both are constant</li> -->
+				<!-- 		<li>$V_{Input}$ - constant ; $R_L$ - variable</li> -->
+				<!-- 		<li>$V_{Input}$ - variable ; $R_L$ - constant</li> -->
+				<!-- 		<li>$V_{Input}$ and $R_L$ both are variable</li> -->
+				<!-- 	</ol> -->
+				<!-- </section> --> 
+				<!-- <section> -->
+				<!-- 	<!-1- <span class="emp"> -1-> --> 
+				<!-- 	<!-1- 	<h4>$V_{Input}$ - constant ; $R_L$ - variable</h4> -1-> -->
+				<!-- 	<!-1- </span> -1-> -->
+
+				<!-- 	<span class="emp"> -->
+				<!-- 		Case:  $V_{Input}$  constant  </br> -->
+				<!-- 		$R_L$  variable -->
+				<!-- 	</span> </br> -->
+				<!-- 		We can calculate the maximum and minimum value of $R_L$ --> 
+				<!-- 		by applying the voltage divider rule. --> 
+				<!-- 		\[ -->
+				<!-- 		V_L=V_Z = \frac{V_iR_L}{R_i+R_L} \\ -->
+				<!-- 		R_L(min)=\frac{V_ZR_i}{V_i-V_Z} -->
+				<!-- 		\] -->
+				<!-- 		from $R_{L(min)}, we can get $I_{L(max)}$ --> 
+				<!-- 		\[ -->
+				<!-- 		I_{L(max)}=\frac{V_Z}{R_{L(min)}} -->
+				<!-- 		\] -->
+
+				<!-- </section> -->
+
+				<!-- </section> -->
+				<section>
+					<h1>The End</h1>
+					<span class="emp"><em>Please Ask</em> </br></span>
+					If you have any query
+				</section>
+				<!-- ================================ end the slides ======================== -->
+
+				<!-- for math using katex -->
+
+				<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+				<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+
+				<script>
+					document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+					delimiters: [
+					{left: '$$', right: '$$', display: true},
+					{left: '$', right: '$', display: false},
+					{left: '\\(', right: '\\)', display: false},
+					{left: '\\[', right: '\\]', display: true}
+					],
+					// • rendering keys, e.g.:
+					throwOnError : false
+					});
+					});
+				</script>
+
+
+
+				<script src="dist/reveal.js"></script>
+				<script src="plugin/notes/notes.js"></script>
+				<script src="plugin/markdown/markdown.js"></script>
+				<script src="plugin/highlight/highlight.js"></script>
+				<script>
+					Reveal.initialize({
+						hash: true,
+						});
+				</script>
+	</body>
+</html>
